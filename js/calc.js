@@ -5,6 +5,6 @@ function sum() {
         return sum + atual
     }, 0)
 }
-function avarege() {
+function average() {
     return sum(...arguments) / arguments.length
 }
