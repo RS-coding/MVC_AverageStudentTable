@@ -80,28 +80,44 @@
     <div class="container card-panel">
       
           <h2 class="materialize-blue-text text-lighten-2 underlined main-title">
-            Dados de Alunos
+            Detalhe de Aluno
           </h2>
 
           <form class="form-add">
             <div class="row white">
               <div class="input-field col s8">
-                <label for="first_name" class="active grey-text  text-darken-3">Adicionar Aluno</label>
+                <label for="first_name" class="active grey-text  text-darken-3">Nome do Aluno</label>
                 <input placeholder="Digite o nome do aluno" id="first_name" type="text" class="validate"/>
               </div>
               
+              <div class="input-field col s12">
+                  <p>Notas por Materia</p>
+              </div>
               <div class="input-field col s4">
-                <button class="btn-floating" type="submit" name="action">
-                  <i class="material-icons">add</i>
-                </button>
+                  <input id ="materia" type="text" class="validate">
+              </div>
+              <div class="input-field col s2">
+                  <input id ="nota_materia_1" type="text" class="validate">
+              </div>
+              <div class="input-field col s2">
+                  <input id ="nota_materia_2" type="text" class="validate">
+              </div>
+              <div class="input-field col s2">
+                  <input id ="nota_materia_3" type="text" class="validate">
+              </div>
+              <div class="input-field col s2">
+                  <input id ="nota_materia_4" type="text" class="validate">
+              </div>
+
+              <div class="input-field-col-s4">
+                  <button class="btn" type="submit" name="action">
+                     Cadastrar
+                  </button>
               </div>
             </div>
           </form>
 
-          <table data-table-student class="striped responsive-table">
-            <thead></thead>
-            <tbody></tbody>
-          </table>
+         
     </div>
 
     <!--JavaScript at end of body for optimized loading-->
@@ -112,6 +128,6 @@
     <script src="js/Views/Alunos.view.js"></script>
     <script src="js/Controllers/Alunos.controller.js"></script>
  
-    <script src="js/app.js"></script>
+ <!--    <script src="js/app.js"></script> -->
   </body>
 </html>

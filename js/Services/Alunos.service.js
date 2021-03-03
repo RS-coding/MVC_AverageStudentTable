@@ -5,7 +5,7 @@ class AlunosService{
 
     add(aluno){
         if(!aluno instanceof AlunoModel){
-            throw TypeError("aluno must be a  an instace of AlunoModel");
+            throw TypeError("aluno must be an instace of AlunoModel");
         }
         this.alunos.push(aluno);
     }
