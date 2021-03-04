@@ -29,6 +29,7 @@ class AlunosView{
             alunos.forEach( aluno =>{
                 const htmlBody = document.createElement("tr");
                 let htmlMedias = `<td>${aluno.nome}</td>`;
+               
                 let encontrado = false;
 
                 this.materias.forEach( materia =>{
@@ -37,18 +38,19 @@ class AlunosView{
                     }
                 })
 
-                if(encontrado){
+                if(encontrado){//se tiver faltando uma nota ele pede uma nota n o singulurar
                     this.materias.forEach( materia =>{
-                    htmlMedias+= `<td>
-                        ${aluno.media[materia] !==undefined ?
-                            aluno.media[materia] :
-                            `<a href ="edit.html?id=${aluno._id}">Incluir notas</a>`
-                        }
-                    </td>`
-                })
+                        htmlMedias+= `<td>
+                            ${aluno.media[materia] !==undefined ?
+                                aluno.media[materia] :
+                                `<a href ="edit.html?id=${aluno._id}">Incluir nota</a>`
+                            }
+                        </td>`
+                    })
+                    //se tiverem faltando as notas todas vai incluir notas
                 }else{
                     htmlMedias+= `<td colspan ="${this.materias.length}">
-                    <a href="edit.html?id=${aluno._id}"></a></td>`
+                    <a href="edit.html?id=${aluno._id}">Incluir Notas</a></td>`
                 }
                 
                 
